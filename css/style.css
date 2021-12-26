@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Varela Round', 'sans-serif';
+}
+/*header*/
+
+
+.container {
+  width: 80%;
+  margin:auto;
+}
+.header{
+  padding: 20px 0;
+  overflow: hidden;
+  /*بيحس بردو بالابناء كدا*/
+  background: white;
+  position: relative;
+}/*من اول هنا*/
+.header input , .header label{
+  position:absolute;
+  top: 15px;
+  right: 25px;
+}
+.header input{
+  display: none;
+}
+.header label{
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 20px;
+  cursor: pointer;
+  background: url('../images/navbar/open.png') no-repeat;
+  background-size: cover;
+
+}
+.header input:checked ~ .list{
+display: block;
+}
+.header input:checked ~ label{
+  display: block;
+  background: url('../images/navbar/close.png') no-repeat;
+  background-size: cover;
+}
+/*لحد هنا عملت اللسته وحجم الدايره وهو هيطبق خصائص ال label ف تاني مره*/
+.header h2{
+text-transform: capitalize;
+font-size: 28px;
+width: 50%;
+float: left;
+}
+
+.header .list{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  width: 50%;
+  float: left;
+  text-decoration: none;
+}
+
+.header .list li {
+  display: inline-block;
+}
+.header .list li a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+}
+.header .list .first a{
+  color:#dd2c00;
+}
+.header .list .second a:hover{
+  color:#dd2c00;
+}
+/*Home*/
+.home{
+background-image: url('../images/home/home-bg.jpg') ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+/*عشان اخلي الصوره ف النص*/
+height: 500px;
+position: relative;
+text-align: center;
+
+}
+.home .home-containt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 1.5;
+}
+.home h1 {
+  text-transform: uppercase;
+  color: #424242;
+  font-size: 40px;
+}
+.home h2 {
+text-transform:uppercase;
+color:#dd2c00;
+}
+.home .desc{
+  padding-top: 40px;
+  color:#9e9e9e;
+  font-size: 20px;
+}
+.home .desc span{
+  color: black;
+}
+
+.home button{
+padding: 10px 30px;
+margin-top: 20px;
+font-size: 17px;
+text-transform: capitalize;
+color: white;
+background-color:#dd2c00;
+border: none;
+cursor: pointer;
+}
+
+/*work*/
+.work{
+margin-top: 40px;
+width: 100%;
+position: relative;
+overflow: hidden;
+/*حس بالمحتويات ال معاكي*/
+}
+.work h1{
+  text-transform: uppercase;
+  color: #424242;
+  font-size: 33px;
+}
+.work .work-section{
+  width:30%;
+  float:left;
+  text-align: center;
+  border: 2px solid #bdbdbd;
+  margin: 40px 17px;
+  padding: 70px 10px;
+}
+.opacity-havor:hover{
+  opacity: 0.8;
+}
+
+.work .work-section .icon{
+  color: #616161;
+}
+.work .work-section h4{
+  color:#dd2c00;
+  text-transform: uppercase;
+  margin: 30px 10px;
+}
+.work .work-section p{
+  line-height: 2;
+  color: #757575;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*portfolio*/
+.portfolio{
+  margin-top: 5%;
+  background: #f8f8f8;
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+.portfolio h2{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 4%;
+  color:#424242;
+}
+.portfolio .portfolio-list{
+  text-align: center;
+  list-style: none;
+  padding: 2% 4%;
+}
+.portfolio .portfolio-list li{
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+}
+.portfolio .portfolio-list .ALL{
+  background: #dd2c00;
+  padding: 15px 1px;
+}
+.portfolio .portfolio-list .some:hover{
+  color:#dd2c00;
+}
+.portfolio .photos div{
+  float: left;
+  width: 25%;
+font-size: 0;
+/*ف حال ان في فورقات بين الصور وال margin and padding مش شغالين*/
+position: relative;
+}
+.portfolio .photos div img{
+  width: 100%;
+}
+ .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  /*عشن فوق عملاه بصفر ف لازم اعدل هنا*/
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay span{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+ cursor: pointer;
+ color: white;
+}
+ .portfolio .photos div:hover .overlay {
+   opacity: 1;
+   visibility: visible;
+ }
+
+ /*profile-skills*/
+ .porfile-skills{
+   overflow: hidden;
+ }
+ .profile ,.skills{
+   width: 50%;
+   float: left;
+   margin-bottom: 10%;
+ }
+ .profile h2 , .skills h2{
+   text-transform: uppercase;
+   font-size: 40px;
+   color:#424242;
+   margin-bottom: 3%;
+ }
+.profile ul{
+  list-style: none;
+}
+.profile li{
+  margin-bottom: 13px;
+  }
+.profile li span , .profile li p{
+  display:inline-block;
+  width: 160px;
+}
+.profile li span{
+  color: black;
+  font-weight: bold;
+  text-transform:capitalize;
+}
+.profile li p{
+color:#757575;
+}
+.profile li .website{
+  color:#dd2c00;
+}
+.skills p{
+  color:#757575;
+  margin-bottom: 3%;
+}
+.skills .bar{
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.skills .bar .title{
+  float: left;
+  color: black;
+  font-weight: bold;
+}
+.skills .bar .perc{
+  float: right;
+  color:#757575;
+}
+/*من اول هنا عشان اعمل الخط*/
+.skills .bar .line{
+  clear: both;
+  height: 2px;
+  background: #f5f5f5;
+  position: relative;
+}
+/*خط تحت الكلام واديله خصائص*/
+.skills .bar .line span{
+background: #dd2c00;
+position: absolute;
+height: 100%;
+top: 0;
+left: 0;
+display: block;
+
+}
+.skills .bar .line span.s1{
+  width: 100%;
+}
+.skills .bar .line span.s2{
+  width: 90%;
+}
+.skills .bar .line span.s3{
+  width: 80%;
+}
+
+
+/*creative*/
+.creative{
+background-image: url('../images/creative/about-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+/*background-attachment: fixed;*/
+height: 600px;
+
+}
+.creative .creative-info{
+  float: right;
+  width: 50%;
+
+}
+.creative h2{
+text-transform: uppercase;
+font-size: 30px;
+margin-top: 50px ;
+margin-bottom: 20px;
+color:#757575;
+
+}
+.creative h2 span{
+  color: black;
+}
+.creative h1{
+  color: #ffab91;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.creative h1 span{
+   color: #dd2c00;
+}
+.creative p{
+  color:#757575;
+  line-height:1.8;
+}
+.creative .p2{
+  color:#757575;
+  line-height:1.8;
+  margin-top: 20px;
+}
+
+/*social*/
+.social{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 4%;
+}
+.social .social-item{
+  width: 33.333%;
+  float: left;
+  padding: 50px;
+  box-sizing: border-box;
+}
+/*.social .social-item{
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}*/
+
+.social-item.facebook{
+  background: #3b5998;
+}
+.social-item.twitter{
+  background: #498cbf;
+}
+.social-item.linkedin{
+  background: #0091ea;
+}
+
+.social-item .icon{
+  color: white;
+  float: left;
+  margin-right: 20px;
+}
+.social-item p span{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  display: inline;
+}
+.social-item p h3{
+  text-transform: uppercase;
+  display: inline;
+}
+ /*drop*/
+ .drop{
+   text-align: center;
+   margin-bottom: 50px;
+ }
+.drop-item h2{
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.drop-item h2 span{
+  color:#757575;
+}
+.form-item{
+  width: 80%;
+  margin: auto;
+}
+/*هيوسطن الفورم واي تعديل هيبقي ف مساحه ال 80%*/
+.form-item input{
+  box-sizing: border-box;
+  outline: 0;
+  /*عشان الخط وقت الكنابه*/
+}
+.form-item .input input{
+  background: #f2f2f2;
+  border: 0;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 14px;
+  width: 49%;
+}
+.form-item input.sub{
+  width: 100%;
+  background: #f2f2f2;
+  border: 0;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 14px;
+}
+.form-item textarea{
+width: 100%;
+background: #f2f2f2;
+border: 0;
+margin-bottom: 15px;
+font-size: 15px;
+outline: 0;
+}
+.form-item input[type=submit]{
+  width: 50%;
+  border: 0;
+  padding: 15px;
+  text-transform: capitalize;
+  font-size: 17px;
+  color: #424242;
+}
+/*footer*/
+.footer p{
+  color:#757575;
+  margin-top: 40px;
+}
+
+/* media for header*/
+@media screen and (min-width:1351px) {
+ .header label{
+  display: none;
+  }
+}
+@media screen and (max-width:1350px) {
+.header h2{
+    width: 100%;
+    float: none;
+  }
+.header .list{
+  width: 100%;
+  float: none;
+  margin-top: 20px;
+  display: none;
+ }
+ .header .list li {
+   display: block;
+   text-align: center;
+ }
+}
+/*media for home*/
+
+@media screen and (max-width:768px) {
+  .home{
+    height: 550px;
+  }
+.home h1{
+  font-size: 30px;
+}
+.home h2{
+  font-size: 20px;
+}
+.home .desc{
+  font-size: 15px;
+}
+}
+/*media for work*/
+@media screen and (max-width:1200px){
+  .work .work-section{
+    width: 100%;
+    float: none;
+    margin-bottom: 7px;
+    padding: 30px 10px;
+  }
+  .work .work-section p{
+    margin-top: 20px;
+  }
+}
+/*media for portfolio*/
+@media screen and (max-width:580px){
+.portfolio .portfolio-list li{
+  width: 77px;
+}
+.portfolio .photos div{
+  width: 50%;
+}
+.overlay span{
+  font-size: 25px;
+}
+
+}
+@media screen and (min-width:581) and (max-width:768px){
+  .portfolio .portfolio-list li{
+    width: 80px;
+  }
+  .overlay span{
+    font-size: 25px;
+  }
+  .portfolio .photos div{
+    width: 50%;
+  }
+}
+/*@media for profile-skills*/
+@media screen and (max-width:850px){
+  .profile ,.skills{
+    width: 100%;
+    float: none;
+}
+/*media for creative*/
+@media screen and (max-width: 991px){
+  .creative{
+    height: auto;
+  }
+  .creative .creative-info{
+    float: none;
+    width: 100%;
+  }
+  .creative h2{
+    padding-top: 30px;
+  }
+  .creative h1{
+    font-size: 27px;
+  }
+  }
+  @media screen and (min-width:851px) and (max-width:915px){
+    .creative{
+      height: auto;
+    }
+    .creative .creative-info{
+      float: none;
+      width: 100%;
+      padding-top: 10px;
+    }
+    .creative h2{
+      padding-top: 30px;
+    }
+    .creative h1{
+      font-size: 27px;
+    }
+  }
+/*@media screen and (min-width:992px) and (max-width:1300px){
+  .creative{
+    height: auto;
+  }
+  .creative .creative-info{
+    float: none;
+    width: 100%;
+  }
+  .creative h2{
+    padding-top: 30px;
+  }
+  .creative h1{
+    font-size: 27px;
+  }
+}
+
+/*media for social*/
+@media screen and (max-width:1268px) {
+  .social .social-item{
+    width: 100%;
+    float: none;
+  }
+}
+/*@media screen and (min-width:991px) and (max-width:1366px) {
+  .social{
+    width: 100%;
+    overflow: hidden;
+  }
+  .social .social-item{
+    width: 33.333%;
+    float: left;
+  }
+}
+/*media for drop*/
+@media screen and (max-width:991px){
+  .form-item{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+  }
+}
